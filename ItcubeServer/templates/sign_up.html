@@ -14,7 +14,9 @@
 <body class="d-flex justify-content-center align-items-center" style="height: 100vh;">
 <form method="post" class="border w-25 p-3 rounded">
 
-    <h3 class="text-center mb-2 text-primary">Sign Up</h3>
+        <div class="d-grid gap-6col-8 mx-auto">
+  <button type="button" class="btn btn-lg btn-outline-primary mb-8" disabled>Registration</button>
+</div>
     {% csrf_token %}
     {{ form.as_p }}
      <div class="d-flex justify-content-around border rounded p-1 mb-3">
@@ -41,7 +43,7 @@
                 </div>
             </div>
     <div class="w-100 d-flex">
-        <button type="submit" class="btn btn-outline-primary w-50 me-1">Sign Up</button>
+        <button type="submit" class="btn btn-outline-success w-50 me-1">Sign Up</button>
         <a href="/" class="btn btn-outline-danger w-50 ms-1">Back</a>
     </div>
 
