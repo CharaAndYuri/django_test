@@ -14,7 +14,7 @@ class User(models.Model):
 
 class Task(models.Model):
     id = models.AutoField(primary_key=True)
-    text = models.CharField(null=False, max_length=255)
+    text = models.TextField(null=False, max_length=500)
     date = models.DateField(null=False)
     checked = models.BooleanField(default=False)
     author = models.ForeignKey(

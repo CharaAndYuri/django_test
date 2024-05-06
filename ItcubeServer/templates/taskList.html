@@ -1,6 +1,7 @@
 {% extends "index.html" %}
 
 {% block content %}
+
     <ol class="list-group p-1 list-group-numbered">
         {% for id, text, date, author, complete, implementor, date_im in tasks %}
             <li class="list-group-item d-flex justify-content-between align-items-start
@@ -14,7 +15,7 @@
                     </svg>
                 </div>
                 <div class="ms-2 me-auto">
-                    <div class="fw-bold">#{{ id }} <i class="h5">{{ text }}</i></div>
+                    <div class="fw ">#{{ id }} <i class="h5">{{ text }}</i></div>
                     Date create: {{ date }}
                     {% if complete %}
                         <i class="text-success bg-dark p-1 rounded ms-3">Date implement: {{ date_im }}</i>
@@ -23,15 +24,15 @@
                 {% if user.is_authenticated %}
                     {% if user.username == author.username %}
                         <form action="/taskDelete/{{ id }}">
-                            <button type="submit" class="btn btn-close me-2" aria-label="Close"></button>
+                            <button type="submit" class="btn btn-outline-primary btn-close me-2" aria-label="Close"></button>
                         </form>
                     {% endif %}
                 {% endif %}
-                <span class="badge text-white bg-secondary p-2">
+                <span class="badge text-dark bg-white p-2">
                     {{ author }}
                 </span>
                 {% if complete %}
-                    <span class="badge text-dark bg-info p-2 ms-1">
+                    <span class="badge text-white bg-dark     p-2 ms-1">
                     {{ implementor }}
                 </span>
                 {% endif %}
