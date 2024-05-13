@@ -25,7 +25,7 @@
 <body>
 <nav class="navbar navbar-light m-3 border rounded bg-secondary text-white">
     <div class="container-fluid justify-content-center flex-row">
-        <a class="navbar-brand text-dark" href="#">Recipes</a>
+        <h5 class="navbar-brand text-white text-bolt">Recipes</h5>
         <div class="d-flex text-danger align-items-center position-absolute end-0">
             {% if user.is_authenticated %}
                 <button class="btn btn-dark me-3  " disabled>{{ user.username }}</button>
