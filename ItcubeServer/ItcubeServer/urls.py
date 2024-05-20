@@ -18,11 +18,12 @@
 
 from django.contrib import admin
 from django.urls import path, include
-from database.views import (task_list, task_form,
+from database.views import (task_list, task_form, com_form, com_create,
                             task_create, task_delete, task_complete)
 
 urlpatterns = [
     path('', task_list),
+    path("comment_form/", com_create),
     path('taskForm/', task_form),
     path('taskCreate/', task_create),
     path('taskDelete/<task_id>', task_delete),

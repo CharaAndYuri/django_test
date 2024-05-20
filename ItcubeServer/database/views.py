@@ -56,3 +56,17 @@ def task_complete(request, task_id):
     task.save()
 
     return redirect("/")
+
+
+def com_form(request):
+    return render(request, 'comform.html')
+
+
+def com_create(request):
+    args = request.GET
+
+    text = args.get('text', '')
+    task = Task(text=text)
+    task.save()
+
+    return redirect("/")

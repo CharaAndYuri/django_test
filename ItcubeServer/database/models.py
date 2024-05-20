@@ -2,6 +2,10 @@ from django.db import models
 from django.conf import settings
 
 
+class Comment(models.Model):
+    id = models.AutoField(primary_key=True)
+    text = models.TextField(null=False, max_length=500)
+
 class User(models.Model):
     id = models.AutoField(primary_key=True)
 
